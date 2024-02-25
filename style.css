@@ -13,6 +13,31 @@ header {
     width: 100%;
     height: 53px;
     z-index: 200;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shop_now {
+    margin-right: 12%;
+    margin-left: 1%;
+}
+
+.check_order span, .shop_now span {
+    margin-left: 10px;
+}
+
+.check_order a, .shop_now a {
+    display: flex;
+}
+
+.check_order a {
+    align-items: center;
+}
+
+.shop_now a {
+    align-items: baseline;
+    margin-bottom: 2px;
 }
 
 .check_order:hover,
@@ -36,28 +61,28 @@ a {
     text-decoration: none;
 }
 
-.text_order {
+/*.text_order {
     bottom: 3px;
     display: inline-block;
     position: absolute;
     width: 100px;
     right: -102px
-}
+}*/
 
-.check_order, .shop_now {
+/*.check_order, .shop_now {
     position: absolute;
-}
+}*/
 
-.check_order {
+/*.check_order {
     left: 1150px;
     top: 25.984px;
-}
-
+}*/
+/*
 .shop_now {
     left: 1277px;
     top: 25.984px;
     bottom: 7px;
-}
+}*/
 
 .account, .shopping_basket {
     margin-right: 5px;
@@ -65,23 +90,25 @@ a {
     line-height: 1.286;
     text-align: left;
 
-    z-index: 130;
+    /*   z-index: 130;*/
     font-size: 14px;
     font-family: "Arial", serif;
 }
 
-.shopping_basket {
+/*.shopping_basket {
     bottom: 1px;
     display: inline-block;
     position: absolute;
-}
+}*/
 
-.shopping_basket span {
+/*.shopping_basket span {
     right: -108px;
-}
+}*/
 
 .menu_list, .menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .menu {
@@ -135,7 +162,10 @@ a {
 
 .slider {
     position: relative;
+    display: flex;
     height: 500px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .choco {
@@ -287,6 +317,7 @@ a {
     background-color: #8c432b;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .info_sections div:first-of-type {
@@ -317,6 +348,9 @@ footer {
     width: 100%;
     background-color: #ffcece;
     height: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer div, footer div a {
@@ -326,11 +360,56 @@ footer div, footer div a {
 }
 
 footer div:first-of-type {
-    float: left;
     margin-left: 100px;
 }
 
 footer div:last-of-type {
-    float: right;
     margin-right: 100px;
+}
+
+@media only screen and (max-width: 1050px) {
+    .choco {
+        width: 88vw;
+        margin: 0 calc(((100vw - 88vw) / 2) - 10px);
+        background-position: -10px -10px;
+        height: 405px;
+    }
+
+    .div_footer {
+        height: auto;
+    }
+
+    .div_footer nav {
+        padding-top: 30px;
+    }
+
+    .choco:hover {
+        transform: scale(1);
+    }
+
+    .choco div:first-of-type {
+        width: 80vw;
+    }
+
+    .cup_cake, .strawberry_cake {
+        display: none;
+    }
+
+    footer {
+        height: auto;
+        padding-bottom: 2px;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    footer div:first-of-type,
+    footer div:last-of-type {
+        margin: 0;
+        padding-right: 5px;
+    }
+}
+@media  only screen and (max-width: 1300px) {
+    .cup_cake, .strawberry_cake {
+        display: none;
+    }
 }
