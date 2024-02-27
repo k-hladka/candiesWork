@@ -408,8 +408,45 @@ footer div:last-of-type {
         padding-right: 5px;
     }
 }
-@media  only screen and (max-width: 1300px) {
+
+@media only screen and (max-width: 1300px) {
     .cup_cake, .strawberry_cake {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .menu {
+        flex-wrap: nowrap;
+    }
+
+    .menu_list {
+        flex-direction: column;
+    }
+
+    .choco div h6 {
+        line-height: 1;
+    }
+
+    .choco div:first-of-type nav:first-of-type {
+        padding: 0;
+    }
+
+    .choco div:first-of-type nav:last-child {
+        margin: 0;
+    }
+
+    .div_footer nav {
+        line-height: 1;
+        padding-top: 40px;
+    }
+
+    .div_footer {
+        margin-top: -60px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .menu {
+        flex-wrap: wrap;
     }
 }
